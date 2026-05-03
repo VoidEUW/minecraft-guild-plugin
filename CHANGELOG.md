@@ -1,0 +1,5 @@
+## [unreleased]
+
+### 🚀 Features
+
+- Added /hallo
