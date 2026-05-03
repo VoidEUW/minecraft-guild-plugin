@@ -1,0 +1,11 @@
+name: GuildPlugin
+version: "1.0"
+main: com.clanplugin.MyPlugin
+api-version: '1.21'
+description: Mein erstes Plugin
+author: LukasKreuz
+
+commands:
+  hallo:
+    description: Sagt hallo
+    usage: /hallo
