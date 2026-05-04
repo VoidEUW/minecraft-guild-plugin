@@ -1,8 +1,8 @@
 name: GuildUtilityPlugin
 api: '1.21'
-version: "0.1.0"
+version: ${project.version}
 main: com.clanplugin.Main
-description: Guild Utility Plugin for Bukkit
+description: A Guild Utility Plugin for Bukkit
 author: Lukas Kreuz
 
 commands:
