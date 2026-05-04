@@ -1,5 +1,7 @@
 package com.clanplugin.commands;
 
+import org.bukkit.plugin.java.JavaPlugin;
+
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
@@ -36,7 +38,16 @@ public class ClanCreateCommand implements SubCommand_I {
             return;
         }
 
-        Clan clan = manager.createClan(args[1], player.getUniqueId());
+        Clan clan;
+        try {
+            clan = manager.createClan(args[1], player.getUniqueId());
+            if (clan == null) {
+                throw new Exception();
+            }
+        } catch (Exception e) {
+            CommandUtils.send(sender, "Error: " + e);
+            return;
+        }
         CommandUtils.send(sender, String.format(Locale.CREATE_SUCCESS, clan.getName()));
     }
 }

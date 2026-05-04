@@ -22,6 +22,6 @@ public class ClanManager {
         Clan clan = new Clan(name, leader);
         clansByName.put(name, clan);
         clanByPlayer.put(leader, clan);
-        return null;
+        return clan;
     }
 }
