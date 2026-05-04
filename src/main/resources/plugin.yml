@@ -1,11 +1,11 @@
-name: GuildPlugin
-version: "1.0"
-main: com.clanplugin.MyPlugin
-api-version: '1.21'
-description: Mein erstes Plugin
-author: LukasKreuz
+name: GuildUtilityPlugin
+api: '1.21'
+version: "0.1.0"
+main: com.clanplugin.Main
+description: Guild Utility Plugin for Bukkit
+author: Lukas Kreuz
 
 commands:
-  hallo:
-    description: Sagt hallo
-    usage: /hallo
+  clan:
+    description: Clan utilities
+    usage: /clan
