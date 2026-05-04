@@ -6,6 +6,11 @@ public class Locale {
     public static final String UNKNOWN_COMMAND = "Unknown subcommand. Use /clan help.";
     public static final String HELP = "/clan create <name> | /clan invite <player>";
 
+    // Clan List
+    public static final String LIST_USAGE = "Usage: /clan list";
+    public static final String NO_CLANS = "No clans exist yet";
+    public static final String LIST_CLAN_SUCCESS = "Clan count: %s | Clans: %s";
+
     // Clan Create
     public static final String CREATE_USAGE = "Usage: /clan create <name>";
     public static final String CREATE_ALREADY_IN = "You are already part of a clan.";

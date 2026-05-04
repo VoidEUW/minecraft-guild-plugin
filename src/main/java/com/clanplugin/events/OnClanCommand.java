@@ -10,6 +10,7 @@ import org.bukkit.entity.Player;
 
 import com.clanplugin.Main;
 import com.clanplugin.commands.ClanCreateCommand;
+import com.clanplugin.commands.ClanListCommand;
 import com.clanplugin.commands.SubCommand_I;
 import com.clanplugin.utils.CommandUtils;
 import com.clanplugin.utils.Locale;
@@ -21,6 +22,7 @@ public class OnClanCommand implements CommandExecutor {
 
     public OnClanCommand(Main plugin) {
         this.plugin = plugin;
+        subCommands.put("list", new ClanListCommand(plugin));
         subCommands.put("create", new ClanCreateCommand(plugin));
     }
 

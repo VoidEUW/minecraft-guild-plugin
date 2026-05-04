@@ -1,7 +1,5 @@
 package com.clanplugin.commands;
 
-import org.bukkit.plugin.java.JavaPlugin;
-
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 

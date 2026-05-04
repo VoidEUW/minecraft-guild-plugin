@@ -1,5 +1,6 @@
 package com.clanplugin;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.UUID;
@@ -23,5 +24,9 @@ public class ClanManager {
         clansByName.put(name, clan);
         clanByPlayer.put(leader, clan);
         return clan;
+    }
+
+    public ArrayList<Clan> getAllClans() {
+        return new ArrayList<Clan>(clansByName.values());
     }
 }
