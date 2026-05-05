@@ -22,7 +22,8 @@ public class ClanTabCompleter implements TabCompleter {
     public List<String> onTabComplete(CommandSender sender, Command command, String label, String[] args) {
         if (args.length == 1) {
             // If the user is typing the first argument, complete
-            List<String> subCommands = Arrays.asList("create", "invite", "leave", "version");
+            List<String> subCommands = Arrays.asList("help", "create", "invite", "join", "accept", "decline", "leave", "list",
+                    "version");
             return subCommands.stream()
                     .filter(s -> s.startsWith(args[0].toLowerCase()))
                     .collect(Collectors.toList());

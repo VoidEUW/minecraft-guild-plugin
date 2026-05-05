@@ -2,13 +2,18 @@ package com.clanplugin.models;
 
 import java.util.*;
 
+// TODO What about clan variants for more interesting interactions?
 public class Clan {
     private final String id;
     private String name;
     private String tag;
     private UUID leader;
+    private boolean needsInvitation = true;
+    private boolean isClosed = false;
+    private int maxMembers = 10;
     private Map<String, ClanRole> roles = new HashMap<>();
     private Map<UUID, ClanMember> members = new HashMap<>();
+    // TODO add Home location
 
     public Clan(String name, UUID leader) {
         this.id = UUID.randomUUID().toString();
@@ -61,5 +66,17 @@ public class Clan {
 
     public Map<UUID, ClanMember> getMembers() {
         return members;
+    }
+
+    public boolean isClosed() {
+        return this.isClosed;
+    }
+
+    public boolean needsInvitation() {
+        return this.needsInvitation;
+    }
+
+    public boolean isFull() {
+        return this.members.size() >= this.maxMembers;
     }
 }
