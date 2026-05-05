@@ -13,6 +13,7 @@ import com.clanplugin.commands.ClanAcceptCommand;
 import com.clanplugin.commands.ClanCreateCommand;
 import com.clanplugin.commands.ClanInviteCommand;
 import com.clanplugin.commands.ClanJoinCommand;
+import com.clanplugin.commands.ClanLeaveCommand;
 import com.clanplugin.commands.ClanListCommand;
 import com.clanplugin.commands.ClanVersionCommand;
 import com.clanplugin.commands.SubCommand_I;
@@ -32,6 +33,7 @@ public class OnClanCommand implements CommandExecutor {
         subCommands.put("invite", new ClanInviteCommand(plugin));
         subCommands.put("join", new ClanJoinCommand(plugin));
         subCommands.put("accept", new ClanAcceptCommand(plugin));
+        subCommands.put("leave", new ClanLeaveCommand(plugin));
     }
 
     @Override
