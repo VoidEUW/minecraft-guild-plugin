@@ -45,10 +45,10 @@ public class ClanListCommand implements SubCommand_I {
             }
 
             String output = stringifyClanMembers(clan);
-            CommandUtils.send(sender, String.format(Locale.LIST_CLAN_MEMBERS, clans.size(), output));
+            CommandUtils.send(sender, String.format(Locale.LIST_CLAN_MEMBERS, output));
         } else {
             String output = stringifyClans(clans);
-            CommandUtils.send(sender, String.format(Locale.LIST_CLAN_CLANS, output));
+            CommandUtils.send(sender, String.format(Locale.LIST_CLAN_CLANS, clans.size(), output));
         }
     }
 

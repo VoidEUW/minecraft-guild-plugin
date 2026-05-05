@@ -35,6 +35,9 @@ public class ClanCreateCommand implements SubCommand_I {
             return;
         }
 
+        // TODO Name length restrictions
+        // TOOD Filter for bad words?
+
         // Trying to create the clan
         Clan clan;
         try {
