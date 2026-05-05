@@ -9,6 +9,7 @@ import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
 import com.clanplugin.Main;
+import com.clanplugin.commands.ClanAcceptCommand;
 import com.clanplugin.commands.ClanCreateCommand;
 import com.clanplugin.commands.ClanListCommand;
 import com.clanplugin.commands.ClanVersionCommand;
@@ -26,6 +27,7 @@ public class OnClanCommand implements CommandExecutor {
         subCommands.put("version", new ClanVersionCommand(plugin));
         subCommands.put("list", new ClanListCommand(plugin));
         subCommands.put("create", new ClanCreateCommand(plugin));
+        subCommands.put("accept", new ClanAcceptCommand(plugin));
     }
 
     @Override
@@ -36,9 +38,10 @@ public class OnClanCommand implements CommandExecutor {
         if (player == null)
             return true;
 
+
         // When no arguments are given, send help message
-        if (!CommandUtils.hasArgs(sender, args))
-            return true;
+        //if (!CommandUtils.hasArgs(sender, args))
+        //    return true;
 
         // Look through the arguments
         SubCommand_I sub = subCommands.get(args[0].toLowerCase());
