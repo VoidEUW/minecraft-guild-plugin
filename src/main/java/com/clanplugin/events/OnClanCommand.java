@@ -11,6 +11,7 @@ import org.bukkit.entity.Player;
 import com.clanplugin.Main;
 import com.clanplugin.commands.ClanAcceptCommand;
 import com.clanplugin.commands.ClanCreateCommand;
+import com.clanplugin.commands.ClanInviteCommand;
 import com.clanplugin.commands.ClanListCommand;
 import com.clanplugin.commands.ClanVersionCommand;
 import com.clanplugin.commands.SubCommand_I;
@@ -27,6 +28,7 @@ public class OnClanCommand implements CommandExecutor {
         subCommands.put("version", new ClanVersionCommand(plugin));
         subCommands.put("list", new ClanListCommand(plugin));
         subCommands.put("create", new ClanCreateCommand(plugin));
+        subCommands.put("invite", new ClanInviteCommand(plugin));
         subCommands.put("accept", new ClanAcceptCommand(plugin));
     }
 
