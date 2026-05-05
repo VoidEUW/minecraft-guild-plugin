@@ -8,4 +8,5 @@ author: Lukas Kreuz
 commands:
   clan:
     description: Clan utilities
-    usage: /clan
+    usage: /clan <create|invite|join|leave|version>
+    aliases: [ c ]
