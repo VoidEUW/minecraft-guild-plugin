@@ -1,5 +1,5 @@
 name: GuildUtilityPlugin
-api: '1.21'
+api-version: '1.21'
 version: ${project.version}
 main: com.clanplugin.Main
 description: A Guild Utility Plugin for Bukkit
@@ -8,5 +8,5 @@ author: Lukas Kreuz
 commands:
   clan:
     description: Clan utilities
-    usage: /clan <create|invite|join|leave|version>
+    usage: /clan <create|invite|join|accept|decline|leave|list|version|help>
     aliases: [ c ]

@@ -24,18 +24,18 @@ public class ClanCreateCommand implements SubCommand_I {
             return;
 
         // Check if Argc is correct
-        if (!CommandUtils.hasEnoughArgs(sender, args, 2, 2)) {
-            CommandUtils.send(sender, Locale.CREATE_USAGE);
+        if (!CommandUtils.hasEnoughArgs(sender, args, 2, 2))
             return;
-        }
 
         ClanManager manager = plugin.getClanManager();
 
-        if (CommandUtils.hasClan(manager, player)) {
+        // Check if player has a clan
+        if (manager.hasClan(player)) {
             CommandUtils.send(sender, Locale.CREATE_ALREADY_IN);
             return;
         }
 
+        // Trying to create the clan
         Clan clan;
         try {
             clan = manager.createClan(args[1], player.getUniqueId());
